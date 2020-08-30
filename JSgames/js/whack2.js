@@ -46,7 +46,7 @@ function startGame(){
     scoreboard.textContent = 0;
     timeUp = false;
     peep();
-    setTimeout(() => timeUp = true, 10000);
+    setTimeout(() => timeUp = true, 60000);
 }
 
 
