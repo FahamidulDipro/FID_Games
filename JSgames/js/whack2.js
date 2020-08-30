@@ -34,6 +34,7 @@ function peep(){
         hole.classList.remove('hammer');
         if(timeUp != true){
             peep();
+        
             
         }
     },time);
@@ -41,7 +42,8 @@ function peep(){
 
 
 function startGame(){
-   
+    button.style.display = 'none';
+    restartButton.style.display = 'block';
     score = 0;
     scoreboard.textContent = 0;
     timeUp = false;
@@ -51,7 +53,12 @@ function startGame(){
 
 
 const button = document.querySelector('.btn');
+const restartButton = document.querySelector('.btn-restart');
 button.addEventListener('click',startGame);
+
+restartButton.addEventListener('click',function(){
+    location.reload();
+})
 
 
 
@@ -78,14 +85,14 @@ sound2.src = '../sound/screem2.mp3'
 var sound3 = new Audio();
 sound3.src = '../sound/guinea_pig_shriek.mp3';
 
-var currentTime = timeLeft.textContent;
-function countDown(){
-   currentTime--;
-   timeLeft.textContent = currentTime;
-   if(currentTime === 0){
-       clearInterval(timerId);
-   }   
+// var currentTime = timeLeft.textContent;
+// function countDown(){
+//    currentTime--;
+//    timeLeft.textContent = currentTime;
+//    if(currentTime === 0){
+//        clearInterval(timerId);
+//    }   
     
-}
+// }
 
-let timerId = setInterval(countDown,1000);
+// let timerId = setInterval(countDown,1000);
