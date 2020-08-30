@@ -41,7 +41,7 @@ function peep(){
 
 
 function startGame(){
-    const timerId = setInterval(countDown,1000);
+   
     score = 0;
     scoreboard.textContent = 0;
     timeUp = false;
@@ -88,4 +88,4 @@ function countDown(){
     
 }
 
-
+let timerId = setInterval(countDown,1000);
