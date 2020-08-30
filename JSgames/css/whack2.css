@@ -1,0 +1,93 @@
+body{
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:peru;
+    font-family: 'Press Start 2P', cursive;
+    color:white;
+}
+h1{
+    font-size:25px;
+  
+}
+
+.game{
+    height: 400px;
+    width: 500px;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap:1em;
+    grid-column-gap:1em; 
+    background:green;
+    border-radius: 20px;
+   
+   
+   
+   
+}
+.mole{
+    background:url('../images/mole2.png') center no-repeat;
+    background-size: 70%;
+    position: relative;
+    top:100%;
+    width:100%;
+    height: 100%;
+    transition:all .5s;
+   
+   
+    
+    
+}
+
+.hole.up .mole{
+    top: 0%;
+    transition: all 1s; 
+
+}
+.hole {
+    
+    background:url('../images/hole3.png')bottom center no-repeat;
+    background-size: contain;
+    position: relative;
+    overflow: hidden;
+       
+}
+.hole:after{
+  
+    display:block;
+    position: absolute;    
+    
+}
+
+.hammer{
+    background:url('../images/hammer.png')center no-repeat;
+    background-size: contain;
+
+}
+.btn{
+    border:none;
+    padding:1em;
+    background:steelblue;
+    color:white;
+    font-size:1em;
+    border-radius: 10px;
+    font-family: 'Press Start 2P', cursive;
+    margin-top:2em;
+   
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .game{
+        height: 50vh;
+        width: 100%;
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+         grid-row-gap:1em;
+        grid-column-gap:1em; 
+        
+    }
+    
+  }

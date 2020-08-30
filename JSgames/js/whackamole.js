@@ -1,6 +1,5 @@
 const square = document.querySelectorAll('.square');
 const mole = document.querySelectorAll('.mole');
-mole.className += 'mole-up';
 const timeleft = document.querySelector('#timeleft');
 let score = document.querySelector('#score');
 
