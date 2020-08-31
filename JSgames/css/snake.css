@@ -1,0 +1,137 @@
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background:steelblue;
+    color:white;
+}
+.title{
+    margin-top:.5em;
+    font-family: 'Germania One', cursive;
+    letter-spacing: .09em;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    border:8px solid black;
+    background:black;
+    border-radius: 10px;
+}
+.grid div{
+    height:50px;
+    width:50px;
+   
+}
+.heading{
+   
+    color:white
+    padding: 0;
+    margin:.3em;
+    border-radius: 5px;
+}
+.scores{
+    padding:.2em;
+    margin:0;
+    float:left;
+    font-family: 'Press Start 2P', cursive;
+    font-size:15px;
+    
+    
+}
+span{
+    color:yellowgreen;
+}
+
+.snake{
+    background: url('../images/snakeskin2.jpg')center no-repeat;
+    background-size: contain;
+    border-radius:10px;
+   
+    
+    
+    /* border-radius:20px; */
+}
+
+
+.apple{
+    background:url('../images/weed2.png')center no-repeat;
+    background-size: contain;
+    border-radius:30px;
+}
+.hurt{
+    background:url('../images/explode2.png')center no-repeat;
+    background-size: cover;
+}
+
+.btn-set{
+    height:300px;
+    width:300px;
+
+    background:grey;
+    margin-top:20px;
+    border-radius: 20px;
+    padding:1em;
+}
+.btn-left{
+    float: left;
+    position: relative;
+    top:30%;
+    background-color:black;
+    color:cyan;
+    border-radius: 30px;
+}
+
+.btn-right{
+    float: right;
+    position: relative;
+    top:30%;
+    background-color:black;
+    color:red;
+    border-radius: 50%;
+}
+    
+
+.btn-up{
+    position:relative;
+    left:25%;
+    background-color:black;
+    color:yellow;
+    border-radius: 50%;
+    
+}
+.btn-down{
+    position: relative;
+    top:60%;
+    left:8.5%;
+    background-color:black;
+    color:yellowgreen;
+    border-radius: 50%;
+    
+   
+}
+.start{
+    position: relative;
+    top:30%;
+    right:10%;
+    background-color:black;
+    color:wheat;
+    border-radius: 50%;
+    
+}
+
+.game-over{
+    
+    display: none;
+    font-size:30px;
+    font-family: 'Press Start 2P', cursive;
+    color:white;
+}
+@media only screen and (max-height:1200px){
+    .grid div{
+        height:32px;
+        width:32px;
+       
+    }
+}
