@@ -1,0 +1,38 @@
+body{
+    min-height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background:teal;
+    color:white;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns : 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.grid div{
+    height:50px;
+    width: 50px;
+    border:3px solid purple;
+}
+
+.player-1 {
+    background-color:purple;
+    border-radius: 20px;
+}
+
+.player-2 {
+    background-color:red;
+    border-radius: 20px;
+}
+
+@media only screen and (max-height:1200px){
+    .grid div{
+        height:40px;
+        width:40px;
+        border:2px solid purple;
+    }
+}
