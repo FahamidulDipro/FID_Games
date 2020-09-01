@@ -1,16 +1,17 @@
 body{
-    min-height: 100vh;
+    min-height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background:steelblue;
+    background:rgb(44, 99, 145);
     color:white;
+   
 }
 .title{
-    margin-top:.5em;
     font-family: 'Germania One', cursive;
     letter-spacing: .09em;
+    
 }
 .grid{
     display: grid;
@@ -24,16 +25,10 @@ body{
     width:50px;
    
 }
-.heading{
-   
-    color:white
-    padding: 0;
-    margin:.3em;
-    border-radius: 5px;
-}
+
 .scores{
     padding:.2em;
-    margin:0;
+    margin-bottom:0.3em;
     float:left;
     font-family: 'Press Start 2P', cursive;
     font-size:15px;
@@ -45,7 +40,7 @@ span{
 }
 
 .snake{
-    background: url('../images/snakeskin2.jpg')center no-repeat;
+    background: url('../images/snakeskin4.jpg')center no-repeat;
     background-size: contain;
     border-radius:10px;
    
@@ -66,8 +61,8 @@ span{
 }
 
 .btn-set{
-    height:300px;
-    width:300px;
+    height:160px;
+    width:160px;
 
     background:grey;
     margin-top:20px;
@@ -78,6 +73,7 @@ span{
     float: left;
     position: relative;
     top:30%;
+    left:-8%;
     background-color:black;
     color:cyan;
     border-radius: 30px;
@@ -87,6 +83,7 @@ span{
     float: right;
     position: relative;
     top:30%;
+    right:-5%;
     background-color:black;
     color:red;
     border-radius: 50%;
@@ -95,7 +92,8 @@ span{
 
 .btn-up{
     position:relative;
-    left:25%;
+    left:2%;
+    top:-5%;
     background-color:black;
     color:yellow;
     border-radius: 50%;
@@ -103,8 +101,8 @@ span{
 }
 .btn-down{
     position: relative;
-    top:60%;
-    left:8.5%;
+    top:40%;
+    right:-33%;
     background-color:black;
     color:yellowgreen;
     border-radius: 50%;
@@ -113,8 +111,8 @@ span{
 }
 .start{
     position: relative;
-    top:30%;
-    right:10%;
+    bottom:0%;
+    right:0%;
     background-color:black;
     color:wheat;
     border-radius: 50%;
@@ -122,7 +120,6 @@ span{
 }
 
 .game-over{
-    
     display: none;
     font-size:30px;
     font-family: 'Press Start 2P', cursive;
@@ -130,8 +127,8 @@ span{
 }
 @media only screen and (max-height:1200px){
     .grid div{
-        height:32px;
-        width:32px;
+        height:25px;
+        width:25px;
        
     }
 }
