@@ -158,7 +158,7 @@ function shoot(e) {
 
 let buttons = document.querySelectorAll('button');
 let buttonShoot = document.querySelector('.shoot-btn');
-document.addEventListener('click', shoot);
+buttonShoot.addEventListener('click', shoot);
 
 
 var soundLaser = new Audio();
