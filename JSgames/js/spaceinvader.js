@@ -113,8 +113,7 @@ function moveInvaders() {
 invaderId = setInterval(moveInvaders, 500);
 
 //Shoot at aliens
-
-function shoot() {
+function shoot(e) {
     let laserId;
     let currentLaserIndex = currentShooterIndex;
     soundLaser.play();
@@ -150,9 +149,14 @@ function shoot() {
     //         laserId = setInterval(moveLaser, 100);
     //         break;
     // }
-    document.addEventListener('click', function () {
-        laserId = setInterval(moveLaser, 100);
-    });
+    // document.addEventListener('click', function () {
+    //     laserId = setInterval(moveLaser, 100);
+    // });
+
+    if (e.which == 1) {
+        laserId = setInterval(moveLaser, 100); //Made it ! at last it was a nightmare. So this is for the shoot button.
+    }
+
 
 }
 
