@@ -23,44 +23,44 @@ squares[currentShooterIndex].classList.add('shooter');
 //Move the shooter along a line
 //This function is made for PC where player will be able to move the shooter with keyboard
 // function moveShooter() {
-    // squares[currentShooterIndex].classList.remove('shooter');
-    // switch (e.keyCode) {
-    //     case 37:
-    //         if (currentShooterIndex % width !== 0) {
-    //             currentShooterIndex -= 1;
-    //         }
-    //         break;
-    //     case 39:
-    //         if (currentShooterIndex % width < width - 1) {
-    //             currentShooterIndex += 1;
+// squares[currentShooterIndex].classList.remove('shooter');
+// switch (e.keyCode) {
+//     case 37:
+//         if (currentShooterIndex % width !== 0) {
+//             currentShooterIndex -= 1;
+//         }
+//         break;
+//     case 39:
+//         if (currentShooterIndex % width < width - 1) {
+//             currentShooterIndex += 1;
 
-    //         }
-    //         break;
+//         }
+//         break;
 
-    // }
+// }
 
-    //For Mobile Controller
-    const buttonLeft = document.querySelector('.left-btn');
-    const buttonRight = document.querySelector('.right-btn');
-    buttonLeft.addEventListener('click',function(){
-        
-        if(currentShooterIndex%width !==0){
-            squares[currentShooterIndex].classList.remove('shooter');
-            currentShooterIndex -= 1;
-            squares[currentShooterIndex].classList.add('shooter');
-        }
+//For Mobile Controller
+const buttonLeft = document.querySelector('.left-btn');
+const buttonRight = document.querySelector('.right-btn');
+buttonLeft.addEventListener('click', function () {
 
-    })
-    buttonRight.addEventListener('click',function(){
-      
-        if(currentShooterIndex % width < width -1){
-            squares[currentShooterIndex].classList.remove('shooter');
-            currentShooterIndex += 1;
-            squares[currentShooterIndex].classList.add('shooter');
-        }
-    })
+    if (currentShooterIndex % width !== 0) {
+        squares[currentShooterIndex].classList.remove('shooter');
+        currentShooterIndex -= 1;
+        squares[currentShooterIndex].classList.add('shooter');
+    }
 
-    
+})
+buttonRight.addEventListener('click', function () {
+
+    if (currentShooterIndex % width < width - 1) {
+        squares[currentShooterIndex].classList.remove('shooter');
+        currentShooterIndex += 1;
+        squares[currentShooterIndex].classList.add('shooter');
+    }
+})
+
+
 // }
 // document.addEventListener('click', moveShooter);
 
@@ -114,7 +114,7 @@ invaderId = setInterval(moveInvaders, 500);
 
 //Shoot at aliens
 
-function shoot(e) {
+function shoot() {
     let laserId;
     let currentLaserIndex = currentShooterIndex;
     soundLaser.play();
@@ -150,8 +150,8 @@ function shoot(e) {
     //         laserId = setInterval(moveLaser, 100);
     //         break;
     // }
-     document.addEventListener('click',function(e){
-       laserId = setInterval(moveLaser,100);
+    document.addEventListener('click', function () {
+        laserId = setInterval(moveLaser, 100);
     });
 
 }
