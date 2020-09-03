@@ -1,9 +1,14 @@
+
 body{
     min-height: 100vh;
     display:flex;
+   
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background:whitesmoke;
+    /* border:5px solid black; */
+    border-radius: 10px;
    
 }
 
@@ -12,6 +17,12 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     background:black;
+    border-radius:20px ;
+    border:3px solid black;
+    margin-right:1em;
+    box-shadow: 5px 10px grey;
+   
+    
    
    
 }
@@ -19,7 +30,8 @@ body{
 .grid div{
     height:20px;
     width:20px;
-    border: 2px solid black;
+   
+   
 }
 .shooter{
     background:url('../images/rocket.png')center no-repeat;
@@ -27,8 +39,8 @@ body{
 
 }
 .invader{
-    background-color:purple;
-    border-radius: 10px;
+    background:url('../images/spaceship3.png')center no-repeat;
+    background-size: contain;
 }
 
 .boom{
@@ -40,4 +52,106 @@ body{
 .laser{
     background:url('../images/bullet.png')center no-repeat;
     background-size: 8px;
+}
+.btn{
+    display: flex;
+    padding:.3em;
+    flex-wrap: wrap;
+    align-items: center;
+    width:85%;
+    
+    /* height: 200px;
+    width: 200px; */
+    margin-top: 20px;
+    background:whitesmoke;
+    justify-content: space-between;
+    padding:.5;
+    border-radius:20px;
+    
+}
+.left-right{
+    display:flex;
+    justify-content: space-between;
+    
+
+}
+.left-btn{
+    padding:1em;
+    border-radius:50%;
+    margin-right: 20px;
+    background:black;
+    color:rgb(44, 100, 255);
+    box-shadow:3px 7px black;
+    outline:none;  
+}
+.left-btn:active{
+    box-shadow: 2px 5px black;
+    outline:none;
+}
+
+.right-btn{
+    padding:1em;
+    border-radius:50%;
+    background:black;
+    color:red;
+    box-shadow:3px 7px black;
+}
+.right-btn:active{
+    box-shadow: 2px 5px black;
+}
+
+.shoot-btn{
+  padding:2em;
+  border-radius:50%;
+  background:black;
+  color:rgb(255, 208, 0);
+  box-shadow:3px 8px black;
+  outline:none;
+  margin-left:0;
+}
+.shoot-btn:active{
+    box-shadow: 2px 5px black;
+    outline:none;
+}
+
+.start-btn{
+    padding:1em;
+    margin-top:30px;
+   
+    width:30%;
+    border-radius:20px;
+    background:black;
+    color:white;
+    box-shadow:3px 7px black;
+    outline:none;
+}
+.start-btn:active{
+    background:rgb(31, 29, 29);
+    box-shadow: 2px 5px black;
+    outline:none;
+    padding:.8dem;
+}
+
+.title{
+    margin-top:-3em;
+    
+    color:red;
+    width:90%;
+    
+    border-radius:10px;
+    font-family: 'Wallpoet', cursive;
+    font-size:25px;
+}
+h3{
+    background:black;
+    padding:.2em;
+    color:white;
+    width:80%;
+    border-radius:30px;
+    font-family: 'Wallpoet', cursive;
+    font-size:18px;
+    margin-top:0;
+}
+span{
+    color:yellowgreen;
 }

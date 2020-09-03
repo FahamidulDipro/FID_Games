@@ -67,6 +67,7 @@ buttonRight.addEventListener('click', function () {
 //Move the Alien Invaders
 
 function moveInvaders() {
+    soundSpaceship.play();    
     const leftEdge = alienInvaders[0] % width === 0;
     const rightEdge = alienInvaders[alienInvaders.length - 1] % width === width - 1
 
@@ -91,11 +92,18 @@ function moveInvaders() {
         resultDisplay.textContent = 'Game Over';
         squares[currentShooterIndex].classList.add('boom');
         clearInterval(invaderId);
+        soundSpaceship.pause();
+        soundLost.play();
+        soundExplode.play();
     }
     for (var i = 0; i <= alienInvaders.length - 1; i++) {
         if (alienInvaders[i] > (squares.length - (width - 1))) {
             resultDisplay.textContent = 'Game Over';
+            soundExplode.play();
+            soundLost.play();
             clearInterval(invaderId);
+            soundSpaceship.pause();
+           
         }
     }
     //Declare Win
@@ -103,14 +111,15 @@ function moveInvaders() {
     if (alienInvadersTakenDown.length === alienInvaders.length) {
         resultDisplay.textContent = 'You Win!'
         clearInterval(invaderId);
+        soundSpaceship.pause();
+        soundSuccess.play();
     }
 }
 
-
-
-
-
 invaderId = setInterval(moveInvaders, 500);
+
+
+
 
 //Shoot at aliens
 function shoot(e) {
@@ -160,7 +169,11 @@ function shoot(e) {
 
 }
 
-let buttons = document.querySelectorAll('button');
+let startButton = document.querySelector('.start-btn')
+startButton.addEventListener('click',function(){
+    
+    location.reload();
+})
 let buttonShoot = document.querySelector('.shoot-btn');
 buttonShoot.addEventListener('click', shoot);
 
@@ -169,9 +182,17 @@ var soundLaser = new Audio();
 soundLaser.src = '../sound/machinegun.mp3';
 
 var soundExplode = new Audio;
-soundExplode.src = '../sound/explode.mp3'
+soundExplode.src = '../sound/explode.mp3';
 
 
+var soundSpaceship = new Audio();
+soundSpaceship.src = '../sound/spaceship.mp3'
+
+var soundSuccess = new Audio();
+soundSuccess.src = '../sound/success.mp3';
+
+var soundLost = new Audio();
+soundLost = '../sound/lose.mp3';
 
 
 

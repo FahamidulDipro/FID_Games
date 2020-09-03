@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Bungee+Shade&family=Wallpoet&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="../css/all.css">
     <link rel="stylesheet" href="../css/spaceinvader.css">
-    <title>Document</title>
+    <title>Space Invaders</title>
 </head>
 
 <body>
-    <h3>Score : <span id="result"></span></h3>
+    <h1 class="title">SPACE &nbsp;&nbsp;&nbsp;&nbsp; INVADERS</h1>
+    <h3>&nbsp;&nbsp;Score : &nbsp;&nbsp;&nbsp;<span id="result"></span></h3>
     <div class="grid">
         <div></div>
         <div></div>
@@ -252,11 +255,14 @@
     </div>
 
     <div class="btn">
-        <button class="shoot-btn">Shoot</button>
-        <button class="left-btn">Left</button>
-        <button class="right-btn">Right</button>
+        <button class="shoot-btn"><i class="fab fa-gripfire fa-2x"></i></button>
+        <div class="left-right">
+            <button class="left-btn"><i class="fas fa-chevron-left fa-2x"></i></button>
+            <button class="right-btn"><i class="fas fa-chevron-right fa-2x"></i></button>
+        </div>
+       
     </div>
-
+    <button class="start-btn"><i class="fas fa-redo-alt fa-2x"></i></button>
     <script src="../js/spaceinvader.js"></script>
 </body>
 
