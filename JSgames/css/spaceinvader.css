@@ -95,9 +95,11 @@ body{
     background:black;
     color:red;
     box-shadow:3px 7px black;
+    outline:none;
 }
 .right-btn:active{
     box-shadow: 2px 5px black;
+    outline:none;
 }
 
 .shoot-btn{
