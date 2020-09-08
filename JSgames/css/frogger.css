@@ -1,0 +1,42 @@
+body{
+    min-height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+}
+.grid div{
+    height:30px;
+    width: 30px;
+    border:3px solid grey;
+}
+.ending-block{
+    background-color: red;
+}
+.starting-block{
+    background-color: blueviolet;
+}
+.frog{
+    background-color: green;
+}
+
+.c1{
+    background: steelblue;
+}
+
+.c2, .c3 {
+    background: grey;
+}
+
+.l1, .l2, .l3{
+    background: brown;
+}
+
+.l4, .l5 {
+    background: lightblue;
+}
